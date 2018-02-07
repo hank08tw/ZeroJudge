@@ -1,0 +1,3 @@
+/Users/hank08tw/Desktop/SproutOJ/a215/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/hank08tw/Desktop/SproutOJ/a215/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/hank08tw/Desktop/SproutOJ/a215/cmake-build-debug/CMakeFiles/a215.dir
