@@ -1,0 +1,1 @@
+/Library/Developer/CommandLineTools/usr/bin/c++  -g -Wl,-search_paths_first -Wl,-headerpad_max_install_names -framework OpenGL -framework GLUT CMakeFiles/snake.dir/main.cpp.o CMakeFiles/snake.dir/game.cpp.o  -o snake 

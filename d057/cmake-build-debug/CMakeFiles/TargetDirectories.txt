@@ -1,0 +1,3 @@
+/Users/hank08tw/Desktop/高中生解題系統/d057/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/hank08tw/Desktop/高中生解題系統/d057/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/hank08tw/Desktop/高中生解題系統/d057/cmake-build-debug/CMakeFiles/d057.dir

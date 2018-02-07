@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/hank08tw/Desktop/practicealgorithm/snake/game.cpp
+glut/glut.h
+-
+iostream
+-
+ctime
+-
+game.h
+/Users/hank08tw/Desktop/practicealgorithm/snake/game.h
+
+/Users/hank08tw/Desktop/practicealgorithm/snake/game.h
+
+/Users/hank08tw/Desktop/practicealgorithm/snake/main.cpp
+glut/glut.h
+-
+iostream
+-
+game.h
+/Users/hank08tw/Desktop/practicealgorithm/snake/game.h
+
