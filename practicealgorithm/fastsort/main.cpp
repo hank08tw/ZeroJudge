@@ -1,5 +1,6 @@
 #include <iostream>
 using namespace std;
+#quick sort algorithm
 void quicksort(int* num,int left,int right);
 int main() {
     int num[10]={6,9,3,2,1,10,33,22,3,2};
