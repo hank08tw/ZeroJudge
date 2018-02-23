@@ -1,4 +1,4 @@
-# Install script for directory: /Users/hank08tw/Desktop/ZeroJudge/a013
+# Install script for directory: /Users/hank08tw/Desktop/ZeroJudge/a024
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -35,5 +35,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/Users/hank08tw/Desktop/ZeroJudge/a013/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/Users/hank08tw/Desktop/ZeroJudge/a024/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
