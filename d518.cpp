@@ -1,39 +1,57 @@
 #include <iostream>
 #include <string.h>
 #include <cstring>
+#include <stdio.h>
+#include <cstdio>
+#include <unordered_map>
 using namespace std;
-int count=0;
+int c;
 struct node{
 	int num;
-	node* n[26];
+	unordered_map <char,node*> m;
 };
 void travel(const string& s,int cur,node* thenode){
-	if(cur==s.length){
+	if(cur==s.length()){
 		if(thenode->num==-1){
-			thenode.num=count;
-			cout << "New! "<< count << endl;
+			c++;
+			thenode->num=c;
+			printf("New! %d\n",c);
 		}else{
-			cout << "Old! " << thenode.num << endl;
+			printf("Old! %d\n",thenode->num);
 		}
 	}else{
-		if(thenode->n[s[cur]-97]!=nullptr){
-			travel(s,cur+1,thenode->n[s[cur]-97]);
+		if(thenode->m.find(s[cur])!=thenode->m.end()){
+			travel(s,cur+1,thenode->m[s[cur]]);
 		}else{
-			thenode->n[s[cur]-97]=new node;
-			for(int i=0;i<26;i++)thenode->n[s[cur]-97]->n[i]=nullptr;
-			thenode->n[s[cur]-97]->num=-1;
-			travel(s,cur+1,thenode->n[s[cur]-97]);
+			thenode->m[s[cur]]=new node;
+			thenode->m[s[cur]]->num=-1;
+			travel(s,cur+1,thenode->m[s[cur]]);
 		}
 	}
 }
-int main(){
-	while(cin >> n){
-		count++;
-		node first;
-		first.num=-1;
-		for(int i=0;i<26;i++)first.n[i]=nullptr;
-		string tmp;
-		cin >> tmp;
-		travel(tmp,0,&first)
+void freenode(node* thenode){
+	unordered_map <char,node*>::iterator it;
+	for(it=thenode->m.begin();it!=thenode->m.end();it++){
+		freenode(it->second);	
 	}
+	thenode->m.clear();
+	delete thenode;
+}
+int main(){
+	ios_base::sync_with_stdio(false);
+	cin.tie(0);
+	int n;
+	while(scanf("%d",&n)!=EOF){
+		c=0;
+		node* first= new node;
+		first->num=-1;
+		string tmp;
+		for(int i=0;i<n;i++){
+			cin >> tmp;
+			travel(tmp,0,first);
+			tmp.clear();
+		}
+		freenode(first);
+	}
+	return 0;
 }
